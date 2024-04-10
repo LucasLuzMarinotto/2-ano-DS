@@ -34,6 +34,8 @@ public class main {
 		System.out.println(filme3.getTitulo());
 		System.out.println(filme3.getDuracaoEmMinutos());
 		System.out.println(filme3.exibirDuracaoEmHoras());
+
+		system.out.println("Esta semana Os filmes "+filme1.getTitulo()+", "+filme2.getTitulo()+" e "+filme3.getTitulo()+" estão em cartaz";
 	}
 
 }
