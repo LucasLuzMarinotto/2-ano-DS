@@ -19,7 +19,7 @@ public class main {
 		
 		System.out.println("Filme 2:");
 		
-		filme2.setTitulo("Hotel Transilv‚nia");
+		filme2.setTitulo("Hotel Transilv√¢nia");
 		filme2.setDuracaoEmMinutos(93);
 		
 		System.out.println(filme2.getTitulo());
