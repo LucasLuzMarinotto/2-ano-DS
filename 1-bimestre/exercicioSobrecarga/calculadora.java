@@ -5,6 +5,10 @@ public class calculadora {
 	private String nome;
 	private double resultado;
 	
+	void setNome(String nom) {
+		this.nome = nom;
+	}
+	
 	void soma(int valor1, int valor2) {
 		this.resultado = valor1 + valor2;
 	}
@@ -13,8 +17,16 @@ public class calculadora {
 		this.resultado = valor1 + valor2; 
 	}
 	
-	double getResultado() {
-		return resultado;
+	void subtracao(int valor1, int valor2) {
+		this.resultado = valor1 - valor2;
+	}
+	
+	void subtracao(double valor1, double valor2) {
+		this.resultado = valor1 - valor2;
+	}
+	
+	String getResultado() {
+		return nome+" "+resultado;
 	}
 	
 }
