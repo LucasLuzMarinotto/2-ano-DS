@@ -1,17 +1,38 @@
-package exercicio2;
+package questao1;
+
+import java.util.Scanner;
 
 public class main {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		cliente cliente1 = new cliente();
-		clientePremium clienteP1 = new clientePremium();
+		Scanner in = new Scanner(System.in);
 		
-		cliente1.setValor_pedido(2000);
-		clienteP1.setValor_pedido(2000);
+		boolean decisao = false;
+		String resposta;
 		
-		System.out.println("O valor do desconto para o cliente normal È:"+cliente1.calcularDesconto());
-		System.out.println("O valor do desconto para o cliente premium È:"+clienteP1.calcularDesconto());
+		livro livro1 = new livro();
+		revista revista1 = new revista();
+		
+		livro1.setTitulo("O Pequeno Pr√≠ncipe");
+		livro1.setAutor("Antoine de Saint-Exup√©ry");
+		livro1.setAnoPublicacao(1943);
+		livro1.setNumeroPaginas(96);
+		livro1.setEditora("Harper Collins Brasil");
+		
+		revista1.setTitulo("Veja");
+		revista1.setAutor("Roberto Civita");
+		revista1.setAnoPublicacao(2024);
+		revista1.setMesPublicacao("Janeiro");
+		revista1.setNumeroEdicao(134);
+		
+		System.out.println("Voc√™ deseja ver os detalhes da revista Veja?");
+		resposta = in.next();
+		
+		if(resposta.equalsIgnoreCase("Sim")) {
+			
+		}
+	in.close();
 	}
 
 }
