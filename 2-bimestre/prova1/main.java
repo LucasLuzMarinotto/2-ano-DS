@@ -30,9 +30,28 @@ public class main {
 		resposta = in.next();
 		
 		if(resposta.equalsIgnoreCase("Sim")) {
-			
+			System.out.println("Você quer ver o mês de publicação?");
+			resposta = in.next();
+			if(resposta.equalsIgnoreCase("sim")) {
+				revista1.exibirDetalhes(decisao);
+			}else {
+				revista1.exibirDetalhes(decisao);
+			}
 		}
-	in.close();
+		
+		System.out.println("Você deseja ver os detalhes do livro 'O Pequeno Principe'?");
+		resposta = in.next();
+		
+		if(resposta.equalsIgnoreCase("Sim")) {
+			System.out.println("Você quer ver a editora deste livro?");
+			resposta = in.next();
+			if(resposta.equalsIgnoreCase("sim")) {
+				livro1.exibirDetalhes(decisao);
+			}else {
+				livro1.exibirDetalhes(decisao);
+			}
+		}
+		in.close();
 	}
 
 }
