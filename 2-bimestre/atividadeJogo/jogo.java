@@ -1,19 +1,12 @@
-package exercicio1;
+package exercico;
 
 public class jogo {
 	private String nome;
 	private double preco;
 	private String distribuidora;
 	
-	// Construtor
 	
-	public void jogo(String nome, double preco, String distribuidora) {
-		this.nome = nome;
-		this.preco = preco;
-		this.distribuidora = distribuidora;
-	}
-	
-	// mÈtodo SET
+	// m√©todo SET
 	
 	public void setNome(String nome) {
 		this.nome = nome;
@@ -27,7 +20,7 @@ public class jogo {
 		this.distribuidora = distribuidora;
 	}
 	
-	// mÈtodo GET
+	// m√©todo GET
 	
 	public String getNome() {
 		return this.nome;
@@ -39,5 +32,12 @@ public class jogo {
 	
 	public String getDistribuidora() {
 		return this.distribuidora;
+	}
+	
+	public String exibirDetalhes() {
+		System.out.println("Nome: "+nome);
+		System.out.println("Pre√ßo: "+preco);
+		System.out.println("Distribuidora: "+distribuidora);
+		return"";
 	}
 }
