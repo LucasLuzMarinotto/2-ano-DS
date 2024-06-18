@@ -1,39 +1,34 @@
 package exercico;
 
-public class jogoFisico extends jogo{
-	private int quantJogadores;
-	private int tempoPartida;
-	private int tempoTotal;
+public class jogoEletronico extends jogo{
+	private String plataforma;
+	private String genero;
 	
-	public void setQuantJogadores(int quantJogadores) {
-		this.quantJogadores = quantJogadores;
+	public void setPlataforma(String plataforma) {
+		this.plataforma = plataforma;
 	}
 	
-	public void setTempoPartida(int tempoPartida) {
-		this.tempoPartida = tempoPartida;
+	public void setGenero(String genero) {
+		this.genero = genero;
 	}
 	
-	public int getQuantJogadores() {
-		return this.quantJogadores;
+	public String getPlataforma() {
+		return this.plataforma;
 	}
 	
-	public int getTempoPartida() {
-		return this.tempoPartida;
+	public String getGenero() {
+		return this.genero;
 	}
 	
-	public int getTempoTotal() {
-		return this.tempoTotal;
-	}
-	
-	public void calcularTempoTotal(int partidas){
-		tempoTotal = this.tempoPartida * partidas;
+	public String jogarOnline(int quantJogadores) {
+		return "Você está jogando online com "+quantJogadores+" jogadores";
 	}
 	
 	@Override
 	public String exibirDetalhes() {
 		super.exibirDetalhes();
-		System.out.println("Quantidade de Jogadores: "+quantJogadores);
-		System.out.println("Tempo de Partida: "+tempoPartida);
+		System.out.println("Plataforma: "+plataforma);
+		System.out.println("Gênero: "+genero);
 		return"";
 	}
 }
