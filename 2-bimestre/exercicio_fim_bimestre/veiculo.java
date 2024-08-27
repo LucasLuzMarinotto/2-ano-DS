@@ -7,7 +7,7 @@ public class veiculo {
 	private String combustivel;
 	private double ipva;
 	
-	public void veiculo(String modelo, double valorTabela, String cor, String combustivel) {
+	public veiculo(String modelo, double valorTabela, String cor, String combustivel) {
 		this.modelo = modelo;
 		this.valorTabela = valorTabela;
 		this.cor = cor;
@@ -55,6 +55,6 @@ public class veiculo {
 	}
 	
 	public String imprimirFicha() {
-		return "O modelo do veículo é: "+this.modelo+". O valor de tabela é: "+this.valorTabela+". A cor do veículo é: "+this.cor+". O combustível usado é: "+this.combustivel+". o valor do IPVA é: "+this.ipva;
+		return "O modelo do veÃ­culo Ã©: "+this.modelo+". O valor de tabela Ã©: "+this.valorTabela+". A cor do veÃ­culo Ã©: "+this.cor+". O combustÃ­vel usado Ã©: "+this.combustivel+". o valor do IPVA Ã©: "+this.ipva;
 	}
 }
