@@ -6,7 +6,7 @@ public abstract class veiculo {
 	private double valorTabela;
 	private String cor;
 	private String combustivel;
-	private double ipva;
+	protected double ipva;
 	
 	public veiculo(String modelo, double valorTabela, String cor, String combustivel) {
 		this.modelo = modelo;
@@ -31,8 +31,12 @@ public abstract class veiculo {
 		this.combustivel = combustivel;
 	}
 	
+	public void setIPVA(double ipva) {
+		this.ipva = ipva;
+	}
+	
 	public void calculaIPVA() {
-		this.ipva = this.valorTabela * 0.5;
+		this.ipva = this.valorTabela * 5/100;
 	}
 	
 	public String getModelo() {
