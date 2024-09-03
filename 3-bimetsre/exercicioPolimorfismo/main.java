@@ -42,7 +42,7 @@ public class main {
 		
 		control1.registra(c1);
 		
-		System.out.println("Gastos com bonificação "+control1.getSoma());
+		System.out.println("Gastos com bonificaÃ§Ã£o "+control1.getSoma());
 		
 	}
 }
