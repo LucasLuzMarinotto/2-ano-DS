@@ -1,7 +1,7 @@
 package atividade;
-
+ 
 public class conteudo {
-
+ 
 	private String titulo;
 	private String categoria;
 	
@@ -27,7 +27,7 @@ public class conteudo {
 	}
 	
 	public void descricao() {
-		System.out.println("o titulo do filme/série é: "+this.titulo);
-		System.out.println("A categoria da filme/série é: "+this.categoria);
+		System.out.println("o titulo do filme/sÃ©rie Ã©: "+this.getTitulo());
+		System.out.println("A categoria da filme/sÃ©rie Ã©: "+this.getCategoria());
 	}
 }
