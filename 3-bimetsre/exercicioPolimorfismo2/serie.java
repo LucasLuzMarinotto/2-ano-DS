@@ -1,15 +1,15 @@
 package atividade;
-
+ 
 public class serie extends conteudo {
 	
 	private String duracao;
 	private int quantEps;
 	private int quantTemps;
 	private int ano;
-
+ 
 	
-	public serie(String duracao, String categoria, String titulo, int quantEps, int quantTemps, int ano) {
-		super(categoria, titulo);
+	public serie(String titulo, String categoria, String duracao, int quantEps, int quantTemps, int ano) {
+		super(titulo, categoria);
 		this.duracao = duracao;
 		this.quantEps = quantEps;
 		this.ano = ano;
@@ -48,15 +48,14 @@ public class serie extends conteudo {
 	}
 	
 	@Override
-	public void descricao() {
+	   public void descricao() {
 		
-		System.out.println("a duracao da sÈrie È: "+this.duracao);
-		System.out.println("a quantidades de episÛdios È: "+this.quantEps);
-		System.out.println("a quantida de temporadas È: "+this.quantTemps);
+		System.out.println("o titulo da s√©rie √©: "+this.getTitulo());
+		System.out.println("A categoria da s√©rie √©: "+this.getCategoria());
+		System.out.println("a duracao da s√©rie √©: "+this.getDuracao());
+		System.out.println("a quantidade de episodios da sua serie √©: "+this.getQuantEps());
+		System.out.println("a quantidade de temporadas da sua serie √©: "+this.getQuantTemps());
+		System.out.println("sua serie foi lan√ßadoa em: "+this.getAno());
 		
 	}
 }
-
-
-	
-	
