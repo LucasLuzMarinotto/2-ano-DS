@@ -1,12 +1,12 @@
 package atividade;
-
+ 
 public class filme extends conteudo {
 	
 	private String duracao;
 	private int ano;
 	
-	public filme(String duracao, String categoria, String titulo, int ano) {
-		super(categoria, titulo);
+	public filme(String titulo, String categoria, String duracao, int ano) {
+		super(titulo, categoria);
 		this.duracao = duracao;
 		this.ano = ano;
 	}
@@ -29,7 +29,10 @@ public class filme extends conteudo {
 	
 	@Override
 	public void descricao() {
-		System.out.println("a duração do filme é: "+this.duracao);
-		System.out.println("o ano de lançamento do filme é: "+this.ano);
+		
+		System.out.println("o titulo do filme Ã©: "+this.getTitulo());
+		System.out.println("A categoria da filme Ã©: "+this.getCategoria());
+		System.out.println("a duracao do filme Ã©: "+this.getDuracao());
+		System.out.println("seu filme foi lanÃ§ado em: "+this.getAno());
 	}
 }
