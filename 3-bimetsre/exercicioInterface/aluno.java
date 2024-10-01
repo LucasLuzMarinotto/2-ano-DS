@@ -1,4 +1,4 @@
-package interface_praticar;
+package atividade;
 
 public class aluno implements pessoa{
 	
@@ -6,6 +6,13 @@ public class aluno implements pessoa{
 	private String telefone;
 	private String endereco;
 	private String matricula;
+	
+	public aluno(String nome, String telefone, String endereco, String matricula) {
+		this.nome = nome;
+		this.telefone = telefone;
+		this.endereco = endereco;
+		this.matricula = matricula;
+	}
 	
 	@Override
 	public String getNome() {
@@ -47,10 +54,10 @@ public class aluno implements pessoa{
 	
 	@Override
 	public void apresentar() {
-		System.out.println("O nome do aluno Ã©: "+this.getNome());
-		System.out.println("O telefone do alunoe Ã©: "+this.getTelefone());
-		System.out.println("O endereÃ§o do aluno Ã©: "+this.getEndereco());
-		System.out.println("O nÃºmero da matrÃ­cula do aluno Ã©: "+this.getMatricula());
+		System.out.println("O nome do aluno é: "+this.getNome());
+		System.out.println("O telefone do aluno é: "+this.getTelefone());
+		System.out.println("O endereço do aluno é: "+this.getEndereco());
+		System.out.println("O número da matrícula do aluno é: "+this.getMatricula());
 	}
 	
 	

@@ -1,4 +1,4 @@
-package interface_praticar;
+package atividade;
 
 public interface pessoa {
 	String getNome();
