@@ -47,10 +47,10 @@ public class aluno implements pessoa{
 	
 	@Override
 	public void apresentar() {
-		System.out.println("O nome do aluno é: "+this.getNome());
-		System.out.println("O telefone do alunoe é: "+this.getTelefone());
-		System.out.println("O endereço do aluno é: "+this.getEndereco());
-		System.out.println("O número da matrícula do aluno é: "+this.getMatricula());
+		System.out.println("O nome do aluno Ã©: "+this.getNome());
+		System.out.println("O telefone do alunoe Ã©: "+this.getTelefone());
+		System.out.println("O endereÃ§o do aluno Ã©: "+this.getEndereco());
+		System.out.println("O nÃºmero da matrÃ­cula do aluno Ã©: "+this.getMatricula());
 	}
 	
 	
