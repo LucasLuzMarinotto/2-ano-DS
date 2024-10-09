@@ -1,60 +1,79 @@
 package atividade;
 
+import java.util.Scanner;
+
 public class main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
 
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		
-		contaBancaria contaB1 = new contaBancaria(1000);
-		contaCorrente contaC1 = new contaCorrente(1000);
-		contaPoupanca contaP1 = new contaPoupanca(1000);
-		
-		// Conta Bancaria
-		System.out.println("Conta Bancaria");
-		
-		System.out.println("");
-		
-		System.out.println("Seu saldo È de: R$"+contaB1.getSaldo());
-		
-		System.out.println("");
-		
-		System.out.println("VocÍ est· sacando: R$500.0");
-		
-		System.out.println("");
-		
-		contaB1.sacar(500);
-		
-		System.out.println("");
-		
-		System.out.println("Seu saldo agora È de: R$"+contaB1.consultarSaldo());
-		
-		System.out.println("");
-		
-		// Conta Corrente
-		
-		System.out.println("Conta Corrente");
-		
-		System.out.println("");
-		
-		System.out.println("Seu limite È de: R$2000");
-		
-		contaC1.limite();
-		
-		System.out.println("Seu saldo È de: R$"+contaC1.getSaldo());
-		
-		System.out.println("");
-		
-		System.out.println("VocÍ est· sacando: R$500.0");
-		
-		System.out.println("");
-		
-		contaC1.sacar(500);
-		
-		System.out.println("");
-		
-		System.out.println("Seu saldo agora È de: R$"+contaC1.consultarSaldo());
-		
-		
-	}
+        // Conta Bancaria
+        System.out.println("Criando Conta Bancaria...");
+        System.out.print("Digite o saldo inicial: R$ ");
+        double saldoBancario = scanner.nextDouble();
+        
+        contaBancaria contaB1 = new contaBancaria(saldoBancario);
+        System.out.println("");
 
+        System.out.println("Seu saldo √© de: R$" + contaB1.getSaldo());
+        System.out.println("");
+        
+
+        System.out.print("Digite o valor para saque: R$ ");
+        double saqueBancario = scanner.nextDouble();
+        
+        contaB1.sacar(saqueBancario);
+        System.out.println("");
+
+        System.out.println("Seu saldo agora √© de: R$" + contaB1.consultarSaldo());
+        
+        System.out.println("");
+
+        // Conta Corrente
+        System.out.println("Criando Conta Corrente...");
+        System.out.print("Digite o saldo inicial: R$ ");
+        double saldoCorrente = scanner.nextDouble();
+        contaCorrente contaC1 = new contaCorrente(saldoCorrente);
+        
+        System.out.println("");
+
+        System.out.println("Seu saldo √© de: R$" + contaC1.getSaldo());
+        
+        System.out.println("");
+
+        System.out.print("Digite o valor para saque: R$ ");
+        double saqueCorrente = scanner.nextDouble();
+        contaC1.sacar(saqueCorrente);
+        
+        System.out.println("");
+
+        System.out.println("Seu saldo agora √© de: R$" + contaC1.consultarSaldo());
+        System.out.println("");
+        System.out.println("Seu saldo (incluindo limite) √© de: R$" + (contaC1.consultarSaldo() + contaC1.getLimite()));
+        
+        System.out.println("");
+
+        // Conta Poupan√ßa
+        System.out.println("Criando Conta Poupan√ßa...");
+        System.out.print("Digite o saldo inicial: R$ ");
+        double saldoPoupanca = scanner.nextDouble();
+        contaPoupanca contaP1 = new contaPoupanca(saldoPoupanca);
+        
+        System.out.println("");
+
+        System.out.println("Seu saldo √© de: R$" + contaP1.getSaldo());
+        System.out.println("");
+
+        System.out.print("Digite o valor para rendimento (taxa em %): ");
+        
+        double taxa = scanner.nextDouble();
+        contaP1.rendimentoValor(taxa);
+        System.out.println("");
+
+        System.out.println("Seu saldo ap√≥s rendimento √© de: R$" + contaP1.consultarSaldo());
+        
+        System.out.println("");
+        System.out.println("");
+        
+        scanner.close();
+    }
 }
