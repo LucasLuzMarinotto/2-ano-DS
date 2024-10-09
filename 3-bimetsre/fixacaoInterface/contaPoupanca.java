@@ -1,6 +1,6 @@
 package atividade;
 
-public class contaPoupanca extends contaBancaria{
+public class contaPoupanca extends contaBancaria {
 	private double saldo;
 	
 	public contaPoupanca(double saldo) {
@@ -17,5 +17,4 @@ public class contaPoupanca extends contaBancaria{
 		saldo = saldo + rendimento;
 		return saldo;
 	}
-	
 }
