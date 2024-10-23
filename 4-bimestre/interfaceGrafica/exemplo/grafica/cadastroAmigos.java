@@ -1,4 +1,4 @@
-package grafica;
+package interfaceGraficaAtividade;
 
 import java.awt.BorderLayout;
 import java.awt.EventQueue;
@@ -13,13 +13,14 @@ import javax.swing.JLabel;
 import java.awt.Font;
 import javax.swing.JTextField;
 import javax.swing.SwingConstants;
+import java.awt.Color;
 
 public class cadastroAmigos extends JFrame {
 
 	private JPanel contentPane;
-	private JTextField textField;
-	private JTextField textField_1;
-	private JTextField textField_2;
+	private JTextField digiteNome;
+	private JTextField digiteApelido;
+	private JTextField digiteTelefone;
 
 	/**
 	 * Launch the application.
@@ -42,58 +43,69 @@ public class cadastroAmigos extends JFrame {
 	 */
 	public cadastroAmigos() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 599, 561);
+		setBounds(100, 100, 636, 561);
 		contentPane = new JPanel();
+		contentPane.setBackground(new Color(216, 191, 216));
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
-		JButton btnNewButton = new JButton("Cadastrar");
-		btnNewButton.setFont(new Font("Tahoma", Font.PLAIN, 20));
-		btnNewButton.addActionListener(new ActionListener() {
+		JButton botaoCadatrar = new JButton("Cadastrar");
+		botaoCadatrar.setBackground(new Color(135, 206, 250));
+		botaoCadatrar.setFont(new Font("Tahoma", Font.PLAIN, 20));
+		botaoCadatrar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 			}
 		});
-		btnNewButton.setBounds(197, 393, 170, 102);
-		contentPane.add(btnNewButton);
+		botaoCadatrar.setBounds(80, 391, 170, 102);
+		contentPane.add(botaoCadatrar);
 		
-		JLabel lblNewLabel = new JLabel("New label");
-		lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);
-		lblNewLabel.setFont(new Font("Tahoma", Font.PLAIN, 20));
-		lblNewLabel.setBounds(22, 284, 123, 51);
-		contentPane.add(lblNewLabel);
+		JLabel labelTelefone = new JLabel("Telefone");
+		labelTelefone.setHorizontalAlignment(SwingConstants.CENTER);
+		labelTelefone.setFont(new Font("Tahoma", Font.PLAIN, 20));
+		labelTelefone.setBounds(103, 297, 123, 51);
+		contentPane.add(labelTelefone);
 		
-		JLabel lblNewLabel_1 = new JLabel("New label");
-		lblNewLabel_1.setHorizontalAlignment(SwingConstants.CENTER);
-		lblNewLabel_1.setFont(new Font("Tahoma", Font.PLAIN, 20));
-		lblNewLabel_1.setBounds(22, 177, 123, 69);
-		contentPane.add(lblNewLabel_1);
+		JLabel labelApelido = new JLabel("Apelido");
+		labelApelido.setHorizontalAlignment(SwingConstants.CENTER);
+		labelApelido.setFont(new Font("Tahoma", Font.PLAIN, 20));
+		labelApelido.setBounds(103, 190, 123, 69);
+		contentPane.add(labelApelido);
 		
-		JLabel lblNewLabel_2 = new JLabel("New label");
-		lblNewLabel_2.setHorizontalAlignment(SwingConstants.CENTER);
-		lblNewLabel_2.setFont(new Font("Tahoma", Font.PLAIN, 20));
-		lblNewLabel_2.setBounds(22, 76, 123, 74);
-		contentPane.add(lblNewLabel_2);
+		JLabel labelNome = new JLabel("Nome");
+		labelNome.setHorizontalAlignment(SwingConstants.CENTER);
+		labelNome.setFont(new Font("Tahoma", Font.PLAIN, 20));
+		labelNome.setBounds(103, 89, 123, 74);
+		contentPane.add(labelNome);
 		
-		JLabel lblNewLabel_3 = new JLabel("Cadastro de Amigos");
-		lblNewLabel_3.setHorizontalAlignment(SwingConstants.CENTER);
-		lblNewLabel_3.setFont(new Font("Tahoma", Font.PLAIN, 20));
-		lblNewLabel_3.setBounds(170, 11, 227, 85);
-		contentPane.add(lblNewLabel_3);
+		JLabel tituloPagina = new JLabel("Cadastro de Amigos");
+		tituloPagina.setHorizontalAlignment(SwingConstants.CENTER);
+		tituloPagina.setFont(new Font("Tahoma", Font.PLAIN, 20));
+		tituloPagina.setBounds(170, 11, 227, 85);
+		contentPane.add(tituloPagina);
 		
-		textField = new JTextField();
-		textField.setBounds(180, 101, 200, 32);
-		contentPane.add(textField);
-		textField.setColumns(10);
+		digiteNome = new JTextField();
+		digiteNome.setFont(new Font("Tahoma", Font.PLAIN, 20));
+		digiteNome.setBounds(261, 114, 200, 32);
+		contentPane.add(digiteNome);
+		digiteNome.setColumns(10);
 		
-		textField_1 = new JTextField();
-		textField_1.setBounds(180, 199, 200, 32);
-		contentPane.add(textField_1);
-		textField_1.setColumns(10);
+		digiteApelido = new JTextField();
+		digiteApelido.setFont(new Font("Tahoma", Font.PLAIN, 20));
+		digiteApelido.setBounds(261, 212, 200, 32);
+		contentPane.add(digiteApelido);
+		digiteApelido.setColumns(10);
 		
-		textField_2 = new JTextField();
-		textField_2.setBounds(180, 297, 200, 32);
-		contentPane.add(textField_2);
-		textField_2.setColumns(10);
+		digiteTelefone = new JTextField();
+		digiteTelefone.setFont(new Font("Tahoma", Font.PLAIN, 20));
+		digiteTelefone.setBounds(261, 310, 200, 32);
+		contentPane.add(digiteTelefone);
+		digiteTelefone.setColumns(10);
+		
+		JButton botaoVoltar = new JButton("Voltar");
+		botaoVoltar.setBackground(new Color(135, 206, 250));
+		botaoVoltar.setFont(new Font("Tahoma", Font.PLAIN, 20));
+		botaoVoltar.setBounds(362, 391, 170, 102);
+		contentPane.add(botaoVoltar);
 	}
 }
