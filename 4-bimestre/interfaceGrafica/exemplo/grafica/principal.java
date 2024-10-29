@@ -1,4 +1,4 @@
-package interfaceGraficaAtividade;
+package interfaceGrafica;
 
 import java.awt.BorderLayout;
 import java.awt.EventQueue;
@@ -60,5 +60,10 @@ public class principal extends JFrame {
 		botaoIrCadastrar.setFont(new Font("Tahoma", Font.PLAIN, 20));
 		botaoIrCadastrar.setBounds(54, 306, 247, 118);
 		contentPane.add(botaoIrCadastrar);
+		
+		JButton btnAtualizarAmigo = new JButton("Atualizar Amigo");
+		btnAtualizarAmigo.setFont(new Font("Tahoma", Font.PLAIN, 20));
+		btnAtualizarAmigo.setBounds(403, 306, 247, 118);
+		contentPane.add(btnAtualizarAmigo);
 	}
 }
