@@ -1,4 +1,4 @@
-package programa_amigos;
+package interfaceGrafica;
 
 import java.awt.List;
 import java.sql.Connection;
@@ -37,5 +37,19 @@ public class conexao {
 			System.out.println("Erro: "+ e.getMessage());
 
 		}
+		
 	}
+	
+	//Método para adcionar amigos
+		public void inserirContato(String nome, String apelido, String telefone) {
+			try {
+				//Guarda dentro da variável query, o código que vai ser executado
+				String query = "insert into amigo (nome, apelido, telefone) VALUES('"+nome+"', '"+apelido+"', '"+telefone+"')";
+				//Executa o código dentro do sql
+				this.statement.executeUpdate(query);	
+			}catch (Exception e) {
+				System.out.println("Erro: "+ e.getMessage());
+			}
+		}
+
 }

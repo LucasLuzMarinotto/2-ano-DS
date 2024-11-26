@@ -1,4 +1,4 @@
-package programa_amigos;
+package interfaceGrafica;
 
 import java.awt.BorderLayout;
 import java.awt.EventQueue;
@@ -58,6 +58,14 @@ public class cadastroAmigos extends JFrame {
 				
 				conexao bd = new conexao();
 				bd.conectar();
+				
+				String nome = digiteNome.getText();
+				String apelido = digiteApelido.getText();
+				String telefone = digiteTelefone.getText();
+				bd.inserirContato(nome, apelido, telefone);
+				digiteNome.setText("");
+				digiteApelido.setText("");
+				digiteTelefone.setText("");
 				
 			}
 		});

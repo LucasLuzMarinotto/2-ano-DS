@@ -1,4 +1,4 @@
-package programa_amigos;
+package interfaceGrafica;
 
 import java.awt.BorderLayout;
 import java.awt.EventQueue;
